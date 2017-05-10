@@ -28,7 +28,6 @@ class ShoppingcartTwocheckoutPlugin extends Plugin
     public function onTwigSiteVariables()
     {
         $this->grav['assets']->addJs('plugin://' . $this->plugin_name . '/gateways/twocheckout/script.js');
-        $this->grav['assets']->addJs('https://checkout.twocheckout.com/checkout.js');
     }
 
     /**
