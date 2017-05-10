@@ -1,1 +1,1 @@
-Gravcart 2Com Plugin
+Gravcart 2CO Plugin
