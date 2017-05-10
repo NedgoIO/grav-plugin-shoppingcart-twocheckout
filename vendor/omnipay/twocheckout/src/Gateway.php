@@ -1,21 +1,21 @@
 <?php
 
 /**
- * Stripe Gateway.
+ * Twocheckout Gateway.
  */
-namespace Omnipay\Stripe;
+namespace Omnipay\Twocheckout;
 
 use Omnipay\Common\AbstractGateway;
 
 /**
- * Stripe Gateway.
+ * Twocheckout Gateway.
  *
  * Example:
  *
  * <code>
- *   // Create a gateway for the Stripe Gateway
+ *   // Create a gateway for the Twocheckout Gateway
  *   // (routes to GatewayFactory::create)
- *   $gateway = Omnipay::create('Stripe');
+ *   $gateway = Omnipay::create('Twocheckout');
  *
  *   // Initialise the gateway
  *   $gateway->initialize(array(
@@ -58,19 +58,19 @@ use Omnipay\Common\AbstractGateway;
  *
  * Test modes:
  *
- * Stripe accounts have test-mode API keys as well as live-mode
+ * Twocheckout accounts have test-mode API keys as well as live-mode
  * API keys. These keys can be active at the same time. Data
  * created with test-mode credentials will never hit the credit
  * card networks and will never cost anyone money.
  *
  * Unlike some gateways, there is no test mode endpoint separate
- * to the live mode endpoint, the Stripe API endpoint is the same
+ * to the live mode endpoint, the Twocheckout API endpoint is the same
  * for test and for live.
  *
  * Setting the testMode flag on this gateway has no effect.  To
  * use test mode just use your test mode API key.
  *
- * You can use any of the cards listed at https://stripe.com/docs/testing
+ * You can use any of the cards listed at https://twocheckout.com/docs/testing
  * for testing.
  *
  * Authentication:
@@ -79,8 +79,8 @@ use Omnipay\Common\AbstractGateway;
  * the apiKey parameter when creating the gateway object.
  *
  * @see \Omnipay\Common\AbstractGateway
- * @see \Omnipay\Stripe\Message\AbstractRequest
- * @link https://stripe.com/docs/api
+ * @see \Omnipay\Twocheckout\Message\AbstractRequest
+ * @link https://twocheckout.com/docs/api
  */
 class Gateway extends AbstractGateway
 {
@@ -91,7 +91,7 @@ class Gateway extends AbstractGateway
 
     public function getName()
     {
-        return 'Stripe';
+        return 'Twocheckout';
     }
 
     /**
@@ -125,13 +125,13 @@ class Gateway extends AbstractGateway
      * Authentication is by means of a single secret API key set as
      * the apiKey parameter when creating the gateway object.
      *
-     * Stripe accounts have test-mode API keys as well as live-mode
+     * Twocheckout accounts have test-mode API keys as well as live-mode
      * API keys. These keys can be active at the same time. Data
      * created with test-mode credentials will never hit the credit
      * card networks and will never cost anyone money.
      *
      * Unlike some gateways, there is no test mode endpoint separate
-     * to the live mode endpoint, the Stripe API endpoint is the same
+     * to the live mode endpoint, the Twocheckout API endpoint is the same
      * for test and for live.
      *
      * Setting the testMode flag on this gateway has no effect.  To
@@ -158,7 +158,7 @@ class Gateway extends AbstractGateway
      * is passed in then the cardReference must be the reference of a card
      * assigned to the customer.  Otherwise, if you do not pass a customer ID,
      * the card you provide must either be a token, like the ones returned by
-     * Stripe.js, or a dictionary containing a user's credit card details.
+     * Twocheckout.js, or a dictionary containing a user's credit card details.
      *
      * IN OTHER WORDS: You cannot just pass a card reference into this request,
      * you must also provide a customer reference if you want to use a stored
@@ -166,11 +166,11 @@ class Gateway extends AbstractGateway
      *
      * @param array $parameters
      *
-     * @return \Omnipay\Stripe\Message\AuthorizeRequest
+     * @return \Omnipay\Twocheckout\Message\AuthorizeRequest
      */
     public function authorize(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\AuthorizeRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\AuthorizeRequest', $parameters);
     }
 
     /**
@@ -180,11 +180,11 @@ class Gateway extends AbstractGateway
      *
      * @param array $parameters
      *
-     * @return \Omnipay\Stripe\Message\CaptureRequest
+     * @return \Omnipay\Twocheckout\Message\CaptureRequest
      */
     public function capture(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\CaptureRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\CaptureRequest', $parameters);
     }
 
     /**
@@ -192,14 +192,14 @@ class Gateway extends AbstractGateway
      *
      * To charge a credit card, you create a new charge object. If your API key
      * is in test mode, the supplied card won't actually be charged, though
-     * everything else will occur as if in live mode. (Stripe assumes that the
+     * everything else will occur as if in live mode. (Twocheckout assumes that the
      * charge would have completed successfully).
      *
      * Either a customerReference or a card is required.  If a customerReference
      * is passed in then the cardReference must be the reference of a card
      * assigned to the customer.  Otherwise, if you do not pass a customer ID,
      * the card you provide must either be a token, like the ones returned by
-     * Stripe.js, or a dictionary containing a user's credit card details.
+     * Twocheckout.js, or a dictionary containing a user's credit card details.
      *
      * IN OTHER WORDS: You cannot just pass a card reference into this request,
      * you must also provide a customer reference if you want to use a stored
@@ -207,11 +207,11 @@ class Gateway extends AbstractGateway
      *
      * @param array $parameters
      *
-     * @return \Omnipay\Stripe\Message\PurchaseRequest
+     * @return \Omnipay\Twocheckout\Message\PurchaseRequest
      */
     public function purchase(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\PurchaseRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\PurchaseRequest', $parameters);
     }
 
     /**
@@ -228,11 +228,11 @@ class Gateway extends AbstractGateway
      *
      * @param array $parameters
      *
-     * @return \Omnipay\Stripe\Message\RefundRequest
+     * @return \Omnipay\Twocheckout\Message\RefundRequest
      */
     public function refund(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\RefundRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\RefundRequest', $parameters);
     }
 
     /**
@@ -240,35 +240,35 @@ class Gateway extends AbstractGateway
      *
      * @param array $parameters
      *
-     * @return \Omnipay\Stripe\Message\VoidRequest
+     * @return \Omnipay\Twocheckout\Message\VoidRequest
      */
     public function void(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\VoidRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\VoidRequest', $parameters);
     }
 
     /**
      * @param array $parameters
      *
-     * @return \Omnipay\Stripe\Message\FetchTransactionRequest
+     * @return \Omnipay\Twocheckout\Message\FetchTransactionRequest
      */
     public function fetchTransaction(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\FetchTransactionRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\FetchTransactionRequest', $parameters);
     }
 
     /**
      * @param array $parameters
-     * @return \Omnipay\Stripe\Message\FetchBalanceTransactionRequest
+     * @return \Omnipay\Twocheckout\Message\FetchBalanceTransactionRequest
      */
     public function fetchBalanceTransaction(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\FetchBalanceTransactionRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\FetchBalanceTransactionRequest', $parameters);
     }
 
     //
     // Cards
-    // @link https://stripe.com/docs/api#cards
+    // @link https://twocheckout.com/docs/api#cards
     //
 
     /**
@@ -283,11 +283,11 @@ class Gateway extends AbstractGateway
      *
      * @param array $parameters
      *
-     * @return \Omnipay\Stripe\Message\CreateCardRequest
+     * @return \Omnipay\Twocheckout\Message\CreateCardRequest
      */
     public function createCard(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\CreateCardRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\CreateCardRequest', $parameters);
     }
 
     /**
@@ -295,23 +295,23 @@ class Gateway extends AbstractGateway
      *
      * If you need to update only some card details, like the billing
      * address or expiration date, you can do so without having to re-enter
-     * the full card details. Stripe also works directly with card networks
+     * the full card details. Twocheckout also works directly with card networks
      * so that your customers can continue using your service without
      * interruption.
      *
-     * When you update a card, Stripe will automatically validate the card.
+     * When you update a card, Twocheckout will automatically validate the card.
      *
      * This requires both a customerReference and a cardReference.
      *
-     * @link https://stripe.com/docs/api#update_card
+     * @link https://twocheckout.com/docs/api#update_card
      *
      * @param array $parameters
      *
-     * @return \Omnipay\Stripe\Message\UpdateCardRequest
+     * @return \Omnipay\Twocheckout\Message\UpdateCardRequest
      */
     public function updateCard(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\UpdateCardRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\UpdateCardRequest', $parameters);
     }
 
     /**
@@ -340,16 +340,16 @@ class Gateway extends AbstractGateway
      *
      * @param array $parameters
      *
-     * @return \Omnipay\Stripe\Message\DeleteCardRequest
+     * @return \Omnipay\Twocheckout\Message\DeleteCardRequest
      */
     public function deleteCard(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\DeleteCardRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\DeleteCardRequest', $parameters);
     }
 
     //
     // Customers
-    // link: https://stripe.com/docs/api#customers
+    // link: https://twocheckout.com/docs/api#customers
     //
 
     /**
@@ -363,11 +363,11 @@ class Gateway extends AbstractGateway
      *
      * @param array $parameters
      *
-     * @return \Omnipay\Stripe\Message\CreateCustomerRequest
+     * @return \Omnipay\Twocheckout\Message\CreateCustomerRequest
      */
     public function createCustomer(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\CreateCustomerRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\CreateCustomerRequest', $parameters);
     }
 
     /**
@@ -393,11 +393,11 @@ class Gateway extends AbstractGateway
      *
      * @param array $parameters
      *
-     * @return \Omnipay\Stripe\Message\CreateCustomerRequest
+     * @return \Omnipay\Twocheckout\Message\CreateCustomerRequest
      */
     public function updateCustomer(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\UpdateCustomerRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\UpdateCustomerRequest', $parameters);
     }
 
     /**
@@ -408,16 +408,16 @@ class Gateway extends AbstractGateway
      *
      * @param array $parameters
      *
-     * @return \Omnipay\Stripe\Message\DeleteCustomerRequest
+     * @return \Omnipay\Twocheckout\Message\DeleteCustomerRequest
      */
     public function deleteCustomer(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\DeleteCustomerRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\DeleteCustomerRequest', $parameters);
     }
 
     //
     // Tokens
-    // @link https://stripe.com/docs/api#tokens
+    // @link https://twocheckout.com/docs/api#tokens
     //
     // This gateway does not currently have a CreateToken message.  In
     // any case tokens are probably not what you are looking for because
@@ -427,11 +427,11 @@ class Gateway extends AbstractGateway
     //
 
     /**
-     * Stripe Fetch Token Request.
+     * Twocheckout Fetch Token Request.
      *
      * Often you want to be able to charge credit cards or send payments
      * to bank accounts without having to hold sensitive card information
-     * on your own servers. Stripe.js makes this easy in the browser, but
+     * on your own servers. Twocheckout.js makes this easy in the browser, but
      * you can use the same technique in other environments with our token API.
      *
      * Tokens can be created with your publishable API key, which can safely
@@ -443,164 +443,164 @@ class Gateway extends AbstractGateway
      *
      * @param array $parameters
      *
-     * @return \Omnipay\Stripe\Message\FetchTokenRequest
+     * @return \Omnipay\Twocheckout\Message\FetchTokenRequest
      */
     public function fetchToken(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\FetchTokenRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\FetchTokenRequest', $parameters);
     }
 
     /**
      * Create Plan
      *
      * @param array $parameters
-     * @return \Omnipay\Stripe\Message\CreatePlanRequest
+     * @return \Omnipay\Twocheckout\Message\CreatePlanRequest
      */
     public function createPlan(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\CreatePlanRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\CreatePlanRequest', $parameters);
     }
 
     /**
      * Fetch Plan
      *
      * @param array $parameters
-     * @return \Omnipay\Stripe\Message\FetchPlanRequest
+     * @return \Omnipay\Twocheckout\Message\FetchPlanRequest
      */
     public function fetchPlan(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\FetchPlanRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\FetchPlanRequest', $parameters);
     }
 
     /**
      * Delete Plan
      *
      * @param array $parameters
-     * @return \Omnipay\Stripe\Message\DeletePlanRequest
+     * @return \Omnipay\Twocheckout\Message\DeletePlanRequest
      */
     public function deletePlan(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\DeletePlanRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\DeletePlanRequest', $parameters);
     }
 
     /**
      * Create Subscription
      *
      * @param array $parameters
-     * @return \Omnipay\Stripe\Message\CreateSubscriptionRequest
+     * @return \Omnipay\Twocheckout\Message\CreateSubscriptionRequest
      */
     public function createSubscription(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\CreateSubscriptionRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\CreateSubscriptionRequest', $parameters);
     }
 
     /**
      * Fetch Subscription
      *
      * @param array $parameters
-     * @return \Omnipay\Stripe\Message\FetchSubscriptionRequest
+     * @return \Omnipay\Twocheckout\Message\FetchSubscriptionRequest
      */
     public function fetchSubscription(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\FetchSubscriptionRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\FetchSubscriptionRequest', $parameters);
     }
 
     /**
      * Update Subscription
      *
      * @param array $parameters
-     * @return \Omnipay\Stripe\Message\UpdateSubscriptionRequest
+     * @return \Omnipay\Twocheckout\Message\UpdateSubscriptionRequest
      */
     public function updateSubscription(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\UpdateSubscriptionRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\UpdateSubscriptionRequest', $parameters);
     }
 
     /**
      * Cancel Subscription
      *
      * @param array $parameters
-     * @return \Omnipay\Stripe\Message\CancelSubscriptionRequest
+     * @return \Omnipay\Twocheckout\Message\CancelSubscriptionRequest
      */
     public function cancelSubscription(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\CancelSubscriptionRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\CancelSubscriptionRequest', $parameters);
     }
 
     /**
      * Fetch Event
      *
      * @param array $parameters
-     * @return \Omnipay\Stripe\Message\FetchEventRequest
+     * @return \Omnipay\Twocheckout\Message\FetchEventRequest
      */
     public function fetchEvent(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\FetchEventRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\FetchEventRequest', $parameters);
     }
 
     /**
      * Fetch Invoice Lines
      *
      * @param array $parameters
-     * @return \Omnipay\Stripe\Message\FetchInvoiceLinesRequest
+     * @return \Omnipay\Twocheckout\Message\FetchInvoiceLinesRequest
      */
     public function fetchInvoiceLines(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\FetchInvoiceLinesRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\FetchInvoiceLinesRequest', $parameters);
     }
 
     /**
      * Fetch Invoice
      *
      * @param array $parameters
-     * @return \Omnipay\Stripe\Message\FetchInvoiceRequest
+     * @return \Omnipay\Twocheckout\Message\FetchInvoiceRequest
      */
     public function fetchInvoice(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\FetchInvoiceRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\FetchInvoiceRequest', $parameters);
     }
 
     /**
      * List Invoices
      *
      * @param array $parameters
-     * @return \Omnipay\Stripe\Message\ListInvoicesRequest
+     * @return \Omnipay\Twocheckout\Message\ListInvoicesRequest
      */
     public function listInvoices(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\ListInvoicesRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\ListInvoicesRequest', $parameters);
     }
 
     /**
      * Create Invoice Item
      *
      * @param array $parameters
-     * @return \Omnipay\Stripe\Message\CreateInvoiceItemRequest
+     * @return \Omnipay\Twocheckout\Message\CreateInvoiceItemRequest
      */
     public function createInvoiceItem(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\CreateInvoiceItemRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\CreateInvoiceItemRequest', $parameters);
     }
 
     /**
      * Fetch Invoice Item
      *
      * @param array $parameters
-     * @return \Omnipay\Stripe\Message\FetchInvoiceItemRequest
+     * @return \Omnipay\Twocheckout\Message\FetchInvoiceItemRequest
      */
     public function fetchInvoiceItem(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\FetchInvoiceItemRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\FetchInvoiceItemRequest', $parameters);
     }
 
     /**
      * Delete Invoice Item
      *
      * @param array $parameters
-     * @return \Omnipay\Stripe\Message\DeleteInvoiceItemRequest
+     * @return \Omnipay\Twocheckout\Message\DeleteInvoiceItemRequest
      */
     public function deleteInvoiceItem(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Stripe\Message\DeleteInvoiceItemRequest', $parameters);
+        return $this->createRequest('\Omnipay\Twocheckout\Message\DeleteInvoiceItemRequest', $parameters);
     }
 }
