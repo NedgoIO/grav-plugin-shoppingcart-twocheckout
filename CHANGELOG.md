@@ -2,7 +2,7 @@
 ## 18-12-2016
 
 1. [](#bugfix)
-    * Fix 404 error #1 https://github.com/flaviocopes/grav-plugin-shoppingcart/issues/40
+    * Fix 404 error #1 https://github.com/NedgoIO/grav-plugin-shoppingcart-twocheckout/issues/40
 
 # v1.1.0
 ## 05-12-2016

@@ -3,13 +3,13 @@ version: 1.1.1
 description: "Add Twocheckout checkout to the Grav Shopping Cart Plugin"
 icon: shopping-cart
 author:
-  name: Flavio Copes
-  email: copesc@gmail.com
+  name: Mitchell Ogden
+  email: mitch@nedgo.io
   url: https://flaviocopes.com
 homepage: https://gravcart.com
 keywords: shoppingcart, ecommerce, e-commerce, plugin, shop, cart, twocheckout
 readme: https://gravcart.com/docs
-bugs: https://github.com/flaviocopes/grav-plugin-shoppingcart/issues
+bugs: https://github.com/NedgoIO/grav-plugin-shoppingcart-twocheckout/issues
 license: MIT
 
 testing: true
