@@ -1,0 +1,15 @@
+{
+    "name": "flaviocopes/grav-plugin-shoppingcart-stripe",
+    "description": "Stripe Plugin for Grav Shopping Cart",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Flavio Copes",
+            "email": "copesc@gmail.com"
+        }
+    ],
+    "require": {
+        "omnipay/stripe": "~2.0",
+        "collizo4sky/omnipay-2checkout": "^1.5"
+    }
+}
