@@ -46,15 +46,15 @@ form:
     payment.methods.twocheckout.secretKey:
       type: text
       default: ''
-      label: Twocheckout Secret Key
+      label: Twocheckout Private Key
       size: medium
-      placeholder: ENTER YOUR TWOCHECKOUT SECRET KEY
-      help: The Twocheckout Secret Key
+      placeholder: ENTER YOUR TWOCHECKOUT PRIVATE KEY
+      help: The Twocheckout Private Key
 
     payment.methods.twocheckout.publicKey:
       type: text
       default: ''
-      label: Twocheckout Public Key
+      label: Twocheckout Publishable Key
       size: medium
-      placeholder: ENTER YOUR TWOCHECKOUT PUBLIC KEY
-      help: The Twocheckout Public Key
+      placeholder: ENTER YOUR TWOCHECKOUT PUBLISHABLE KEY
+      help: The Twocheckout Publishable Key
