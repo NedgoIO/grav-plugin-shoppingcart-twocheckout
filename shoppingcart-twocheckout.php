@@ -4,7 +4,7 @@ namespace Grav\Plugin;
 use Grav\Common\Plugin;
 
 /**
- * Class ShoppingcartStripePlugin
+ * Class ShoppingcartTwocheckoutPlugin
  * @package Grav\Plugin
  */
 class ShoppingcartTwocheckoutPlugin extends Plugin
@@ -28,7 +28,7 @@ class ShoppingcartTwocheckoutPlugin extends Plugin
     public function onTwigSiteVariables()
     {
         $this->grav['assets']->addJs('plugin://' . $this->plugin_name . '/gateways/twocheckout/script.js');
-        $this->grav['assets']->addJs('https://checkout.stripe.com/checkout.js');
+        $this->grav['assets']->addJs('https://checkout.twocheckout.com/checkout.js');
     }
 
     /**
@@ -75,8 +75,8 @@ class ShoppingcartTwocheckoutPlugin extends Plugin
     {
         if (!$this->gateway) {
             $this->requireGateway();
-            require_once __DIR__ . '/gateways/stripe/gateway.php';
-            $this->gateway = new ShoppingCart\GatewayStripe();
+            require_once __DIR__ . '/gateways/twocheckout/gateway.php';
+            $this->gateway = new ShoppingCart\GatewayTwocheckout();
         }
 
         return $this->gateway;

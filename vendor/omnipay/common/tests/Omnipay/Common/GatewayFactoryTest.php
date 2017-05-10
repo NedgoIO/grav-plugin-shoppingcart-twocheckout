@@ -90,6 +90,6 @@ class GatewayFactoryTest extends TestCase
     {
         $gateways = $this->factory->getSupportedGateways();
 
-        $this->assertContains('Stripe', $gateways);
+        $this->assertContains('Twocheckout', $gateways);
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Omnipay\Stripe\Message;
+namespace Omnipay\Twocheckout\Message;
 
 use Omnipay\Tests\TestCase;
 
@@ -14,7 +14,7 @@ class FetchInvoiceRequestTest extends TestCase
 
     public function testEndpoint()
     {
-        $this->assertSame('https://api.stripe.com/v1/invoices/in_17ZPbRCryC4r2g4vIdAFxptK', $this->request->getEndpoint());
+        $this->assertSame('https://api.twocheckout.com/v1/invoices/in_17ZPbRCryC4r2g4vIdAFxptK', $this->request->getEndpoint());
     }
 
     public function testSendSuccess()

@@ -1,14 +1,14 @@
 <?php
 
 /**
- * Stripe Fetch Subscription Request.
+ * Twocheckout Fetch Subscription Request.
  */
-namespace Omnipay\Stripe\Message;
+namespace Omnipay\Twocheckout\Message;
 
 /**
- * Stripe Fetch Subscription Request.
+ * Twocheckout Fetch Subscription Request.
  *
- * @link https://stripe.com/docs/api#retrieve_subscription
+ * @link https://twocheckout.com/docs/api#retrieve_subscription
  */
 class FetchSubscriptionRequest extends AbstractRequest
 {

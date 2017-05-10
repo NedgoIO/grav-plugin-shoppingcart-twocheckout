@@ -1,17 +1,17 @@
 <?php
 
 /**
- * Stripe Delete Customer Request.
+ * Twocheckout Delete Customer Request.
  */
-namespace Omnipay\Stripe\Message;
+namespace Omnipay\Twocheckout\Message;
 
 /**
- * Stripe Delete Customer Request.
+ * Twocheckout Delete Customer Request.
  *
  * Permanently deletes a customer. It cannot be undone. Also immediately
  * cancels any active subscriptions on the customer.
  *
- * @link https://stripe.com/docs/api#delete_customer
+ * @link https://twocheckout.com/docs/api#delete_customer
  */
 class DeleteCustomerRequest extends AbstractRequest
 {

@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Stripe Fetch Transaction Request.
+ * Twocheckout Fetch Transaction Request.
  */
-namespace Omnipay\Stripe\Message;
+namespace Omnipay\Twocheckout\Message;
 
 /**
- * Stripe Fetch Transaction Request.
+ * Twocheckout Fetch Transaction Request.
  *
  * Example -- note this example assumes that the purchase has been successful
  * and that the transaction ID returned from the purchase is held in $sale_id.
@@ -22,8 +22,8 @@ namespace Omnipay\Stripe\Message;
  * </code>
  *
  * @see PurchaseRequest
- * @see Omnipay\Stripe\Gateway
- * @link https://stripe.com/docs/api#retrieve_charge
+ * @see Omnipay\Twocheckout\Gateway
+ * @link https://twocheckout.com/docs/api#retrieve_charge
  */
 class FetchTransactionRequest extends AbstractRequest
 {

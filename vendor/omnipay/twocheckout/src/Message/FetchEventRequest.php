@@ -1,14 +1,14 @@
 <?php
 
 /**
- * Stripe Fetch Event Request.
+ * Twocheckout Fetch Event Request.
  */
-namespace Omnipay\Stripe\Message;
+namespace Omnipay\Twocheckout\Message;
 
 /**
- * Stripe Fetch Event Request.
+ * Twocheckout Fetch Event Request.
  *
- * @link https://stripe.com/docs/api/curl#retrieve_event
+ * @link https://twocheckout.com/docs/api/curl#retrieve_event
  */
 class FetchEventRequest extends AbstractRequest
 {

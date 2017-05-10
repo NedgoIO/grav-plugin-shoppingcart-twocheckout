@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Stripe Capture Request.
+ * Twocheckout Capture Request.
  */
-namespace Omnipay\Stripe\Message;
+namespace Omnipay\Twocheckout\Message;
 
 /**
- * Stripe Capture Request.
+ * Twocheckout Capture Request.
  *
  * Use this request to capture and process a previously created authorization.
  *

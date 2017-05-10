@@ -1,15 +1,15 @@
 <?php
 
 /**
- * Stripe List Invoices Request.
+ * Twocheckout List Invoices Request.
  */
-namespace Omnipay\Stripe\Message;
+namespace Omnipay\Twocheckout\Message;
 
 /**
- * Stripe List Invoices Request.
+ * Twocheckout List Invoices Request.
  *
- * @see Omnipay\Stripe\Gateway
- * @link https://stripe.com/docs/api#list_invoices
+ * @see Omnipay\Twocheckout\Gateway
+ * @link https://twocheckout.com/docs/api#list_invoices
  */
 class ListInvoicesRequest extends AbstractRequest
 {

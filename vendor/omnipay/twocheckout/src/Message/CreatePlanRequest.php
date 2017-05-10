@@ -1,15 +1,15 @@
 <?php
 
 /**
- * Stripe Create Plan Request.
+ * Twocheckout Create Plan Request.
  */
-namespace Omnipay\Stripe\Message;
+namespace Omnipay\Twocheckout\Message;
 
 /**
- * Stripe Create Plan Request
+ * Twocheckout Create Plan Request
  *
- * @see Omnipay\Stripe\Gateway
- * @link https://stripe.com/docs/api#create_plan
+ * @see Omnipay\Twocheckout\Gateway
+ * @link https://twocheckout.com/docs/api#create_plan
  */
 class CreatePlanRequest extends AbstractRequest
 {

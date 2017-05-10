@@ -1,6 +1,6 @@
 <?php
 
-namespace Omnipay\Stripe\Message;
+namespace Omnipay\Twocheckout\Message;
 
 use Omnipay\Tests\TestCase;
 
@@ -15,7 +15,7 @@ class RefundRequestTest extends TestCase
 
     public function testEndpoint()
     {
-        $this->assertSame('https://api.stripe.com/v1/charges/ch_12RgN9L7XhO9mI/refund', $this->request->getEndpoint());
+        $this->assertSame('https://api.twocheckout.com/v1/charges/ch_12RgN9L7XhO9mI/refund', $this->request->getEndpoint());
     }
 
     public function testAmount()

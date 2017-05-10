@@ -117,7 +117,7 @@ class Helper
      *
      *      \Custom\Gateway     => \Custom\Gateway
      *      \Custom_Gateway     => \Custom_Gateway
-     *      Stripe              => \Omnipay\Stripe\Gateway
+     *      Twocheckout              => \Omnipay\Twocheckout\Gateway
      *      PayPal\Express      => \Omnipay\PayPal\ExpressGateway
      *      PayPal_Express      => \Omnipay\PayPal\ExpressGateway
      *

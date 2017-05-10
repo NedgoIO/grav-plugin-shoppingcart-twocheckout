@@ -1,14 +1,14 @@
 <?php
 
 /**
- * Stripe Fetch Invoice Item Request.
+ * Twocheckout Fetch Invoice Item Request.
  */
-namespace Omnipay\Stripe\Message;
+namespace Omnipay\Twocheckout\Message;
 
 /**
- * Stripe Fetch Invoice Item Request.
+ * Twocheckout Fetch Invoice Item Request.
  *
- * @link https://stripe.com/docs/api#retrieve_invoiceitem
+ * @link https://twocheckout.com/docs/api#retrieve_invoiceitem
  */
 class FetchInvoiceItemRequest extends AbstractRequest
 {

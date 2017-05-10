@@ -1,24 +1,24 @@
 <?php
 
 /**
- * Stripe Purchase Request.
+ * Twocheckout Purchase Request.
  */
-namespace Omnipay\Stripe\Message;
+namespace Omnipay\Twocheckout\Message;
 
 /**
- * Stripe Purchase Request.
+ * Twocheckout Purchase Request.
  *
  * To charge a credit card, you create a new charge object. If your API key
  * is in test mode, the supplied card won't actually be charged, though
- * everything else will occur as if in live mode. (Stripe assumes that the
+ * everything else will occur as if in live mode. (Twocheckout assumes that the
  * charge would have completed successfully).
  *
  * Example:
  *
  * <code>
- *   // Create a gateway for the Stripe Gateway
+ *   // Create a gateway for the Twocheckout Gateway
  *   // (routes to GatewayFactory::create)
- *   $gateway = Omnipay::create('Stripe');
+ *   $gateway = Omnipay::create('Twocheckout');
  *
  *   // Initialise the gateway
  *   $gateway->initialize(array(
@@ -57,12 +57,12 @@ namespace Omnipay\Stripe\Message;
  *   }
  * </code>
  *
- * Because a purchase request in Stripe looks similar to an
+ * Because a purchase request in Twocheckout looks similar to an
  * Authorize request, this class simply extends the AuthorizeRequest
  * class and over-rides the getData method setting capture = true.
  *
- * @see \Omnipay\Stripe\Gateway
- * @link https://stripe.com/docs/api#charges
+ * @see \Omnipay\Twocheckout\Gateway
+ * @link https://twocheckout.com/docs/api#charges
  */
 class PurchaseRequest extends AuthorizeRequest
 {

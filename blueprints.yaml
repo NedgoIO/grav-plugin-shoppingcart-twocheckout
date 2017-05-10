@@ -1,13 +1,13 @@
-name: Shopping Cart Stripe Addon
+name: Shopping Cart Twocheckout Addon
 version: 1.1.1
-description: "Add Stripe checkout to the Grav Shopping Cart Plugin"
+description: "Add Twocheckout checkout to the Grav Shopping Cart Plugin"
 icon: shopping-cart
 author:
   name: Flavio Copes
   email: copesc@gmail.com
   url: https://flaviocopes.com
 homepage: https://gravcart.com
-keywords: shoppingcart, ecommerce, e-commerce, plugin, shop, cart, stripe
+keywords: shoppingcart, ecommerce, e-commerce, plugin, shop, cart, twocheckout
 readme: https://gravcart.com/docs
 bugs: https://github.com/flaviocopes/grav-plugin-shoppingcart/issues
 license: MIT
@@ -31,11 +31,11 @@ form:
       validate:
         type: bool
 
-    payment.methods.stripe.name:
+    payment.methods.twocheckout.name:
       type: hidden
-      default: 'Stripe'
+      default: 'Twocheckout'
 
-    payment.methods.stripe.description:
+    payment.methods.twocheckout.description:
       type: text
       default: ''
       label: Payment Description
@@ -43,18 +43,18 @@ form:
       placeholder: An optional description appearing in the payment popup
       help: An optional description appearing in the payment popup
 
-    payment.methods.stripe.secretKey:
+    payment.methods.twocheckout.secretKey:
       type: text
       default: ''
-      label: Stripe Secret Key
+      label: Twocheckout Secret Key
       size: medium
       placeholder: ENTER YOUR STRIPE SECRET KEY
-      help: The Stripe Secret Key
+      help: The Twocheckout Secret Key
 
-    payment.methods.stripe.publicKey:
+    payment.methods.twocheckout.publicKey:
       type: text
       default: ''
-      label: Stripe Public Key
+      label: Twocheckout Public Key
       size: medium
       placeholder: ENTER YOUR STRIPE PUBLIC KEY
-      help: The Stripe Public Key
+      help: The Twocheckout Public Key

@@ -1,24 +1,24 @@
 <?php
 
 /**
- * Stripe Update Credit Card Request.
+ * Twocheckout Update Credit Card Request.
  */
-namespace Omnipay\Stripe\Message;
+namespace Omnipay\Twocheckout\Message;
 
 /**
- * Stripe Update Credit Card Request.
+ * Twocheckout Update Credit Card Request.
  *
  * If you need to update only some card details, like the billing
  * address or expiration date, you can do so without having to re-enter
- * the full card details. Stripe also works directly with card networks
+ * the full card details. Twocheckout also works directly with card networks
  * so that your customers can continue using your service without
  * interruption.
  *
- * When you update a card, Stripe will automatically validate the card.
+ * When you update a card, Twocheckout will automatically validate the card.
  *
  * This requires both a customerReference and a cardReference.
  *
- * @link https://stripe.com/docs/api#update_card
+ * @link https://twocheckout.com/docs/api#update_card
  */
 class UpdateCardRequest extends AbstractRequest
 {

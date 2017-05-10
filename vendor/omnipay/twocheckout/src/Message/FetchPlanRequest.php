@@ -1,14 +1,14 @@
 <?php
 
 /**
- * Stripe Fetch Plan Request.
+ * Twocheckout Fetch Plan Request.
  */
-namespace Omnipay\Stripe\Message;
+namespace Omnipay\Twocheckout\Message;
 
 /**
- * Stripe Fetch Plan Request.
+ * Twocheckout Fetch Plan Request.
  *
- * @link https://stripe.com/docs/api#retrieve_plan
+ * @link https://twocheckout.com/docs/api#retrieve_plan
  */
 class FetchPlanRequest extends AbstractRequest
 {

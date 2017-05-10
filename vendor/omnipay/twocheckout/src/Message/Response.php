@@ -1,18 +1,18 @@
 <?php
 
 /**
- * Stripe Response.
+ * Twocheckout Response.
  */
-namespace Omnipay\Stripe\Message;
+namespace Omnipay\Twocheckout\Message;
 
 use Omnipay\Common\Message\AbstractResponse;
 
 /**
- * Stripe Response.
+ * Twocheckout Response.
  *
- * This is the response class for all Stripe requests.
+ * This is the response class for all Twocheckout requests.
  *
- * @see \Omnipay\Stripe\Gateway
+ * @see \Omnipay\Twocheckout\Gateway
  */
 class Response extends AbstractResponse
 {

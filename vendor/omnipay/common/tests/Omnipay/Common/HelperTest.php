@@ -74,14 +74,14 @@ class HelperTest extends TestCase
 
     public function testGetGatewayShortNameSimple()
     {
-        $shortName = Helper::getGatewayShortName('Omnipay\\Stripe\\Gateway');
-        $this->assertSame('Stripe', $shortName);
+        $shortName = Helper::getGatewayShortName('Omnipay\\Twocheckout\\Gateway');
+        $this->assertSame('Twocheckout', $shortName);
     }
 
     public function testGetGatewayShortNameSimpleLeadingSlash()
     {
-        $shortName = Helper::getGatewayShortName('\\Omnipay\\Stripe\\Gateway');
-        $this->assertSame('Stripe', $shortName);
+        $shortName = Helper::getGatewayShortName('\\Omnipay\\Twocheckout\\Gateway');
+        $this->assertSame('Twocheckout', $shortName);
     }
 
     public function testGetGatewayShortNameUnderscore()
@@ -122,8 +122,8 @@ class HelperTest extends TestCase
 
     public function testGetGatewayClassNameSimple()
     {
-        $class = Helper::getGatewayClassName('Stripe');
-        $this->assertEquals('\\Omnipay\\Stripe\\Gateway', $class);
+        $class = Helper::getGatewayClassName('Twocheckout');
+        $this->assertEquals('\\Omnipay\\Twocheckout\\Gateway', $class);
     }
 
     public function testGetGatewayClassNamePartialNamespace()

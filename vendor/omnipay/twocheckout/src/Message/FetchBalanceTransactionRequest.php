@@ -1,12 +1,12 @@
 <?php
 /**
- * Stripe Fetch Transaction Request
+ * Twocheckout Fetch Transaction Request
  */
 
-namespace Omnipay\Stripe\Message;
+namespace Omnipay\Twocheckout\Message;
 
 /**
- * Stripe Fetch Balance Request
+ * Twocheckout Fetch Balance Request
  *
  * Example -- note this example assumes that the purchase has been successful
  * and that the transaction balance ID returned from the purchase is held in $balanceTransactionId.
@@ -22,8 +22,8 @@ namespace Omnipay\Stripe\Message;
  * </code>
  *
  * @see PurchaseRequest
- * @see Omnipay\Stripe\Gateway
- * @link https://stripe.com/docs/api#retrieve_balance_transaction
+ * @see Omnipay\Twocheckout\Gateway
+ * @link https://twocheckout.com/docs/api#retrieve_balance_transaction
  */
 class FetchBalanceTransactionRequest extends AbstractRequest
 {

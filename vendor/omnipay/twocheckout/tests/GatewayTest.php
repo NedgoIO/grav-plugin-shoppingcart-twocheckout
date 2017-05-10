@@ -1,6 +1,6 @@
 <?php
 
-namespace Omnipay\Stripe;
+namespace Omnipay\Twocheckout;
 
 use Omnipay\Tests\GatewayTestCase;
 
@@ -17,7 +17,7 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->authorize(array('amount' => '10.00'));
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\AuthorizeRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\AuthorizeRequest', $request);
         $this->assertSame('10.00', $request->getAmount());
     }
 
@@ -25,7 +25,7 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->capture(array('amount' => '10.00'));
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\CaptureRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\CaptureRequest', $request);
         $this->assertSame('10.00', $request->getAmount());
     }
 
@@ -33,7 +33,7 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->purchase(array('amount' => '10.00'));
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\PurchaseRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\PurchaseRequest', $request);
         $this->assertSame('10.00', $request->getAmount());
     }
 
@@ -41,7 +41,7 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->refund(array('amount' => '10.00'));
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\RefundRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\RefundRequest', $request);
         $this->assertSame('10.00', $request->getAmount());
     }
 
@@ -49,35 +49,35 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->void();
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\VoidRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\VoidRequest', $request);
     }
 
     public function testFetchTransaction()
     {
         $request = $this->gateway->fetchTransaction(array());
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\FetchTransactionRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\FetchTransactionRequest', $request);
     }
 
     public function testFetchBalanceTransaction()
     {
         $request = $this->gateway->fetchBalanceTransaction(array());
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\FetchBalanceTransactionRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\FetchBalanceTransactionRequest', $request);
     }
 
     public function testFetchToken()
     {
         $request = $this->gateway->fetchToken(array());
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\FetchTokenRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\FetchTokenRequest', $request);
     }
 
     public function testCreateCard()
     {
         $request = $this->gateway->createCard(array('description' => 'foo'));
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\CreateCardRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\CreateCardRequest', $request);
         $this->assertSame('foo', $request->getDescription());
     }
 
@@ -85,7 +85,7 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->updateCard(array('cardReference' => 'cus_1MZSEtqSghKx99'));
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\UpdateCardRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\UpdateCardRequest', $request);
         $this->assertSame('cus_1MZSEtqSghKx99', $request->getCardReference());
     }
 
@@ -93,7 +93,7 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->deleteCard(array('cardReference' => 'cus_1MZSEtqSghKx99'));
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\DeleteCardRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\DeleteCardRequest', $request);
         $this->assertSame('cus_1MZSEtqSghKx99', $request->getCardReference());
     }
 
@@ -101,7 +101,7 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->createCustomer(array('description' => 'foo@foo.com'));
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\CreateCustomerRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\CreateCustomerRequest', $request);
         $this->assertSame('foo@foo.com', $request->getDescription());
     }
 
@@ -109,7 +109,7 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->updateCustomer(array('customerReference' => 'cus_1MZSEtqSghKx99'));
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\UpdateCustomerRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\UpdateCustomerRequest', $request);
         $this->assertSame('cus_1MZSEtqSghKx99', $request->getCustomerReference());
     }
 
@@ -117,7 +117,7 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->deleteCustomer(array('customerReference' => 'cus_1MZSEtqSghKx99'));
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\DeleteCustomerRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\DeleteCustomerRequest', $request);
         $this->assertSame('cus_1MZSEtqSghKx99', $request->getCustomerReference());
     }
 
@@ -125,7 +125,7 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->createPlan(array('id' => 'basic'));
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\CreatePlanRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\CreatePlanRequest', $request);
         $this->assertSame('basic', $request->getId());
     }
 
@@ -133,7 +133,7 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->fetchPlan(array('id' => 'basic'));
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\FetchPlanRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\FetchPlanRequest', $request);
         $this->assertSame('basic', $request->getId());
     }
 
@@ -141,7 +141,7 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->deletePlan(array('id' => 'basic'));
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\DeletePlanRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\DeletePlanRequest', $request);
         $this->assertSame('basic', $request->getId());
     }
 
@@ -149,7 +149,7 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->createSubscription(array('plan' => 'basic'));
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\CreateSubscriptionRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\CreateSubscriptionRequest', $request);
         $this->assertSame('basic', $request->getPlan());
     }
 
@@ -160,7 +160,7 @@ class GatewayTest extends GatewayTestCase
             'subscriptionReference' => 'sub_1mokfidgjdidf'
         ));
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\FetchSubscriptionRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\FetchSubscriptionRequest', $request);
         $this->assertSame('cus_1MZSEtqZghix99', $request->getCustomerReference());
         $this->assertSame('sub_1mokfidgjdidf', $request->getSubscriptionReference());
     }
@@ -169,7 +169,7 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->updateSubscription(array('subscriptionReference' => 'sub_1mokfidgjdidf'));
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\UpdateSubscriptionRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\UpdateSubscriptionRequest', $request);
         $this->assertSame('sub_1mokfidgjdidf', $request->getSubscriptionReference());
     }
 
@@ -180,7 +180,7 @@ class GatewayTest extends GatewayTestCase
             'subscriptionReference' => 'sub_1mokfidgjdidf'
         ));
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\CancelSubscriptionRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\CancelSubscriptionRequest', $request);
         $this->assertSame('cus_1MZSEtqZghix99', $request->getCustomerReference());
         $this->assertSame('sub_1mokfidgjdidf', $request->getSubscriptionReference());
     }
@@ -189,7 +189,7 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->fetchEvent(array('eventReference' => 'evt_17X23UCryC4r2g4vdolh6muI'));
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\FetchEventRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\FetchEventRequest', $request);
         $this->assertSame('evt_17X23UCryC4r2g4vdolh6muI', $request->getEventReference());
     }
 
@@ -197,7 +197,7 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->fetchInvoiceLines(array('invoiceReference' => 'in_17ZPbRCryC4r2g4vIdAFxptK'));
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\FetchInvoiceLinesRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\FetchInvoiceLinesRequest', $request);
         $this->assertSame('in_17ZPbRCryC4r2g4vIdAFxptK', $request->getInvoiceReference());
     }
 
@@ -205,7 +205,7 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->fetchInvoice(array('invoiceReference' => 'in_17ZPbRCryC4r2g4vIdAFxptK'));
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\FetchInvoiceRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\FetchInvoiceRequest', $request);
         $this->assertSame('in_17ZPbRCryC4r2g4vIdAFxptK', $request->getInvoiceReference());
     }
 
@@ -213,14 +213,14 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->listInvoices(array());
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\ListInvoicesRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\ListInvoicesRequest', $request);
     }
 
     public function testCreateInvoiceItem()
     {
         $request = $this->gateway->createInvoiceItem(array('invoiceItemReference' => 'ii_17ZPbRCryC4r2g4vIdAFxptK'));
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\CreateInvoiceItemRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\CreateInvoiceItemRequest', $request);
         $this->assertSame('ii_17ZPbRCryC4r2g4vIdAFxptK', $request->getInvoiceItemReference());
     }
 
@@ -228,7 +228,7 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->fetchInvoiceItem(array('invoiceItemReference' => 'ii_17ZPbRCryC4r2g4vIdAFxptK'));
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\FetchInvoiceItemRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\FetchInvoiceItemRequest', $request);
         $this->assertSame('ii_17ZPbRCryC4r2g4vIdAFxptK', $request->getInvoiceItemReference());
     }
 
@@ -236,7 +236,7 @@ class GatewayTest extends GatewayTestCase
     {
         $request = $this->gateway->deleteInvoiceItem(array('invoiceItemReference' => 'ii_17ZPbRCryC4r2g4vIdAFxptK'));
 
-        $this->assertInstanceOf('Omnipay\Stripe\Message\DeleteInvoiceItemRequest', $request);
+        $this->assertInstanceOf('Omnipay\Twocheckout\Message\DeleteInvoiceItemRequest', $request);
         $this->assertSame('ii_17ZPbRCryC4r2g4vIdAFxptK', $request->getInvoiceItemReference());
     }
 }

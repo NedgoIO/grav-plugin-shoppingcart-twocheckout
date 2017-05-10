@@ -1,16 +1,16 @@
 {
-    "name": "omnipay/stripe",
+    "name": "omnipay/twocheckout",
     "type": "library",
-    "description": "Stripe driver for the Omnipay payment processing library",
+    "description": "Twocheckout driver for the Omnipay payment processing library",
     "keywords": [
         "gateway",
         "merchant",
         "omnipay",
         "pay",
         "payment",
-        "stripe"
+        "twocheckout"
     ],
-    "homepage": "https://github.com/thephpleague/omnipay-stripe",
+    "homepage": "https://github.com/thephpleague/omnipay-twocheckout",
     "license": "MIT",
     "authors": [
         {
@@ -19,11 +19,11 @@
         },
         {
             "name": "Omnipay Contributors",
-            "homepage": "https://github.com/thephpleague/omnipay-stripe/contributors"
+            "homepage": "https://github.com/thephpleague/omnipay-twocheckout/contributors"
         }
     ],
     "autoload": {
-        "psr-4": { "Omnipay\\Stripe\\" : "src/" }
+        "psr-4": { "Omnipay\\Twocheckout\\" : "src/" }
     },
     "require": {
         "omnipay/common": "~2.0"

@@ -1,18 +1,18 @@
 <?php
 
 /**
- * Stripe Create Invoice Item Request.
+ * Twocheckout Create Invoice Item Request.
  */
-namespace Omnipay\Stripe\Message;
+namespace Omnipay\Twocheckout\Message;
 
 /**
- * Stripe Create Invoice Item Request
+ * Twocheckout Create Invoice Item Request
  *
- * @see Omnipay\Stripe\Gateway
- * @link https://stripe.com/docs/api#create_invoiceitem
+ * @see Omnipay\Twocheckout\Gateway
+ * @link https://twocheckout.com/docs/api#create_invoiceitem
  *
  * Providing the invoice-item reference will update the invoice-item
- * @link https://stripe.com/docs/api#update_invoiceitem
+ * @link https://twocheckout.com/docs/api#update_invoiceitem
  */
 class CreateInvoiceItemRequest extends AbstractRequest
 {

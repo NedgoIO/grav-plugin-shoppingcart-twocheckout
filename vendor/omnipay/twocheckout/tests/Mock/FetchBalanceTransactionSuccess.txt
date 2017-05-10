@@ -22,15 +22,15 @@ Cache-Control: no-cache, no-store
       "amount": 80,
       "application": null,
       "currency": "chf",
-      "description": "Stripe currency conversion fee",
-      "type": "stripe_fee"
+      "description": "Twocheckout currency conversion fee",
+      "type": "twocheckout_fee"
     },
     {
       "amount": 146,
       "application": null,
       "currency": "chf",
-      "description": "Stripe processing fees",
-      "type": "stripe_fee"
+      "description": "Twocheckout processing fees",
+      "type": "twocheckout_fee"
     }
   ],
   "net": 3787,

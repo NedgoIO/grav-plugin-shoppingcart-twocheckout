@@ -1,6 +1,6 @@
 <?php
 
-namespace Omnipay\Stripe\Message;
+namespace Omnipay\Twocheckout\Message;
 
 use Omnipay\Tests\TestCase;
 
@@ -15,7 +15,7 @@ class CreateSubscriptionRequestTest extends TestCase
 
     public function testEndpoint()
     {
-        $this->assertSame('https://api.stripe.com/v1/customers/cus_7lqqgOm33t4xSU/subscriptions', $this->request->getEndpoint());
+        $this->assertSame('https://api.twocheckout.com/v1/customers/cus_7lqqgOm33t4xSU/subscriptions', $this->request->getEndpoint());
     }
 
     public function testSendSuccess()

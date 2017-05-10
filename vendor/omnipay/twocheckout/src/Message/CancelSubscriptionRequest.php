@@ -1,15 +1,15 @@
 <?php
 
 /**
- * Stripe Cancel Subscription Request.
+ * Twocheckout Cancel Subscription Request.
  */
-namespace Omnipay\Stripe\Message;
+namespace Omnipay\Twocheckout\Message;
 
 /**
- * Stripe Cancel Subscription Request.
+ * Twocheckout Cancel Subscription Request.
  *
- * @see Omnipay\Stripe\Gateway
- * @link https://stripe.com/docs/api/#cancel_subscription
+ * @see Omnipay\Twocheckout\Gateway
+ * @link https://twocheckout.com/docs/api/#cancel_subscription
  */
 class CancelSubscriptionRequest extends AbstractRequest
 {

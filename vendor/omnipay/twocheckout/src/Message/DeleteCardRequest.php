@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Stripe Delete Credit Card Request.
+ * Twocheckout Delete Credit Card Request.
  */
-namespace Omnipay\Stripe\Message;
+namespace Omnipay\Twocheckout\Message;
 
 /**
- * Stripe Delete Credit Card Request.
+ * Twocheckout Delete Credit Card Request.
  *
  * This is normally used to delete a credit card from an existing
  * customer.
@@ -29,7 +29,7 @@ namespace Omnipay\Stripe\Message;
  * a customerReference and delete the customer.  This might be
  * dangerous but it's the best way to ensure backwards compatibility.
  *
- * @link https://stripe.com/docs/api#delete_card
+ * @link https://twocheckout.com/docs/api#delete_card
  */
 class DeleteCardRequest extends AbstractRequest
 {

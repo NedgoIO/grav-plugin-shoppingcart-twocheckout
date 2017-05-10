@@ -12,5 +12,5 @@ return array(
     'Symfony\\Component\\HttpFoundation\\' => array($vendorDir . '/symfony/http-foundation'),
     'Symfony\\Component\\EventDispatcher\\' => array($vendorDir . '/symfony/event-dispatcher'),
     'Omnipay\\TwoCheckoutPlus\\' => array($vendorDir . '/collizo4sky/omnipay-2checkout/src'),
-    'Omnipay\\Stripe\\' => array($vendorDir . '/omnipay/stripe/src'),
+    'Omnipay\\Twocheckout\\' => array($vendorDir . '/omnipay/twocheckout/src'),
 );

@@ -14,7 +14,7 @@
 ## 09-08-2016
 
 1. [](#bugfix)
-    * Fix issue with Stripe amount format
+    * Fix issue with Twocheckout amount format
     * Fix issue in `enabled` state conflicting with main plugin
 
 # v1.1.0-beta.2
@@ -59,4 +59,4 @@
 ## 07-02-2016
 
 1. [](#new)
-    * First release of the Stripe Plugin
+    * First release of the Twocheckout Plugin

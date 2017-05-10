@@ -1,15 +1,15 @@
 <?php
 
 /**
- * Stripe Create Subscription Request.
+ * Twocheckout Create Subscription Request.
  */
-namespace Omnipay\Stripe\Message;
+namespace Omnipay\Twocheckout\Message;
 
 /**
- * Stripe Create Subscription Request
+ * Twocheckout Create Subscription Request
  *
- * @see Omnipay\Stripe\Gateway
- * @link https://stripe.com/docs/api/php#create_subscription
+ * @see Omnipay\Twocheckout\Gateway
+ * @link https://twocheckout.com/docs/api/php#create_subscription
  */
 class CreateSubscriptionRequest extends AbstractRequest
 {

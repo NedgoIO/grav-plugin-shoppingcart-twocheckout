@@ -1,14 +1,14 @@
 <?php
 
 /**
- * Stripe Delete Invoice Item Request.
+ * Twocheckout Delete Invoice Item Request.
  */
-namespace Omnipay\Stripe\Message;
+namespace Omnipay\Twocheckout\Message;
 
 /**
- * Stripe Delete Invoice Item Request.
+ * Twocheckout Delete Invoice Item Request.
  *
- * @link https://stripe.com/docs/api#delete_invoiceitem
+ * @link https://twocheckout.com/docs/api#delete_invoiceitem
  */
 class DeleteInvoiceItemRequest extends AbstractRequest
 {

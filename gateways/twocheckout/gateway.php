@@ -5,7 +5,7 @@ use RocketTheme\Toolbox\Event\Event;
 use Omnipay\Omnipay;
 
 /**
- * Class GatewayStripe
+ * Class GatewayTwocheckout
  * @package Grav\Plugin\ShoppingCart
  */
 class GatewayTwocheckout extends Gateway
@@ -32,7 +32,7 @@ class GatewayTwocheckout extends Gateway
         $currency = $this->grav['config']->get('plugins.shoppingcart.general.currency');
         $description = $this->grav['config']->get('plugins.shoppingcart.payment.methods.twocheckout.description');
 
-        $token = $order->extra['stripeToken'];
+        $token = $order->extra['twocheckoutToken'];
         $secretKey = $this->grav['config']->get('plugins.shoppingcart.payment.methods.twocheckout.secretKey');
 
         $gateway = Omnipay::create('Twocheckout');

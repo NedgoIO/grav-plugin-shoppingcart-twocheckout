@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Stripe Create Customer Request.
+ * Twocheckout Create Customer Request.
  */
-namespace Omnipay\Stripe\Message;
+namespace Omnipay\Twocheckout\Message;
 
 /**
- * Stripe Create Customer Request.
+ * Twocheckout Create Customer Request.
  *
  * Customer objects allow you to perform recurring charges and
  * track multiple charges that are associated with the same customer.
@@ -79,7 +79,7 @@ namespace Omnipay\Stripe\Message;
  * }
  * </code>
  *
- * @link https://stripe.com/docs/api#customers
+ * @link https://twocheckout.com/docs/api#customers
  */
 class CreateCustomerRequest extends AbstractRequest
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Omnipay\Stripe\Message;
+namespace Omnipay\Twocheckout\Message;
 
 use Omnipay\Tests\TestCase;
 
@@ -15,9 +15,9 @@ class CreateCardRequestTest extends TestCase
     public function testEndpoint()
     {
         $this->request->setCustomerReference('');
-        $this->assertSame('https://api.stripe.com/v1/customers', $this->request->getEndpoint());
+        $this->assertSame('https://api.twocheckout.com/v1/customers', $this->request->getEndpoint());
         $this->request->setCustomerReference('cus_1MZSEtqSghKx99');
-        $this->assertSame('https://api.stripe.com/v1/customers/cus_1MZSEtqSghKx99/cards', $this->request->getEndpoint());
+        $this->assertSame('https://api.twocheckout.com/v1/customers/cus_1MZSEtqSghKx99/cards', $this->request->getEndpoint());
     }
 
     /**

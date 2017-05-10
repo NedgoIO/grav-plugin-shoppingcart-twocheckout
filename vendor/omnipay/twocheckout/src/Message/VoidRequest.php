@@ -1,14 +1,14 @@
 <?php
 
 /**
- * Stripe Void Request.
+ * Twocheckout Void Request.
  */
-namespace Omnipay\Stripe\Message;
+namespace Omnipay\Twocheckout\Message;
 
 /**
- * Stripe Void Request.
+ * Twocheckout Void Request.
  *
- * Stripe does not support voiding, per se, but
+ * Twocheckout does not support voiding, per se, but
  * we treat it as a full refund.
  *
  * See RefundRequest for additional information
@@ -31,8 +31,8 @@ namespace Omnipay\Stripe\Message;
  * </code>
  *
  * @see RefundRequest
- * @see Omnipay\Stripe\Gateway
- * @link https://stripe.com/docs/api#create_refund
+ * @see Omnipay\Twocheckout\Gateway
+ * @link https://twocheckout.com/docs/api#create_refund
  */
 class VoidRequest extends RefundRequest
 {

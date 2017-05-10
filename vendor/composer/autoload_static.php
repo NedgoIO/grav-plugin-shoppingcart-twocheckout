@@ -25,7 +25,7 @@ class ComposerStaticInitd11ed8c14e63a373538540e5bfd8c391
         'O' => 
         array (
             'Omnipay\\TwoCheckoutPlus\\' => 24,
-            'Omnipay\\Stripe\\' => 15,
+            'Omnipay\\Twocheckout\\' => 15,
         ),
     );
 
@@ -54,9 +54,9 @@ class ComposerStaticInitd11ed8c14e63a373538540e5bfd8c391
         array (
             0 => __DIR__ . '/..' . '/collizo4sky/omnipay-2checkout/src',
         ),
-        'Omnipay\\Stripe\\' => 
+        'Omnipay\\Twocheckout\\' => 
         array (
-            0 => __DIR__ . '/..' . '/omnipay/stripe/src',
+            0 => __DIR__ . '/..' . '/omnipay/twocheckout/src',
         ),
     );
 

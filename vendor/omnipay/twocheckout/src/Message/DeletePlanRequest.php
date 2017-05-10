@@ -1,14 +1,14 @@
 <?php
 
 /**
- * Stripe Delete Plan Request.
+ * Twocheckout Delete Plan Request.
  */
-namespace Omnipay\Stripe\Message;
+namespace Omnipay\Twocheckout\Message;
 
 /**
- * Stripe Delete Plan Request.
+ * Twocheckout Delete Plan Request.
  *
- * @link https://stripe.com/docs/api#delete_plan
+ * @link https://twocheckout.com/docs/api#delete_plan
  */
 class DeletePlanRequest extends AbstractRequest
 {
