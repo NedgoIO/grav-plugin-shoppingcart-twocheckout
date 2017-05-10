@@ -48,7 +48,7 @@ form:
       default: ''
       label: Twocheckout Secret Key
       size: medium
-      placeholder: ENTER YOUR STRIPE SECRET KEY
+      placeholder: ENTER YOUR TWOCHECKOUT SECRET KEY
       help: The Twocheckout Secret Key
 
     payment.methods.twocheckout.publicKey:
@@ -56,5 +56,5 @@ form:
       default: ''
       label: Twocheckout Public Key
       size: medium
-      placeholder: ENTER YOUR STRIPE PUBLIC KEY
+      placeholder: ENTER YOUR TWOCHECKOUT PUBLIC KEY
       help: The Twocheckout Public Key
